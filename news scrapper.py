@@ -17,4 +17,4 @@ with open('mynews.txt', 'w') as f:
        f.write((news.text + '\n'))
        
 #create an email attachment and send
-ezgmail.send('daltonmarhufu@gmail.com', 'Todays-News!', 'Beep bop this is a bot giving news', ['mynews.txt'])
+ezgmail.send('Your email address', 'Todays-News!', 'Beep bop this is a bot giving news', ['mynews.txt'])
