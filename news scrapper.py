@@ -17,4 +17,8 @@ with open('mynews.txt', 'w') as f:
        f.write((news.text + '\n'))
        
 #create an email attachment and send
-ezgmail.send('Your email address', 'Todays-News!', 'Beep bop this is a bot giving news', ['mynews.txt'])
+try:
+    ezgmail.send('Your email here', 'Todays-News!', 'Beep bop this is a bot giving news', ['mynews.txt'], cc='cc field', bcc='bcc field')
+    print("email sent")
+except:
+    print("email did not send")
